@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <style>
+    /* Stil für den ersten Abschnitt */
+    #section1 {
+      display: block;
+      text-align: center;
+      margin-top: 200px;
+    }
+
+    /* Stil für den zweiten Abschnitt */
+    #section2 {
+      display: none;
+      /* Hintergrundfarbe und Textfarbe im zweiten Abschnitt */
+      background-color: rgb(1, 19, 29);
+      color: white;
+      text-align: center;
+      margin-top: 200px;
+    }
+    body {
+      background-color: rgb(1, 19, 29);
+    }
+    h1 {
+      color: white;
+      font-size: 100px;
+      text-align: center;
+      top: -100px;
+    }
+    textarea {
+      margin-top: 20px;
+    }
+    h2 {
+      color: white;
+      font-size: 100px;
+    }
+    button {
+      background-color: rgb(21, 255, 255);
+      display: block;
+      margin: 20px auto;
+      width: 100px;
+      height: 50px;
+      font-size: 30px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Erster Abschnitt -->
+  <div id="section1">
+    <h1>lp d edqdqd</h1>
+    <textarea id="kokain1" name="kokain1" rows="4" cols="50">
+     enter entcodet sentence
+    </textarea>
+    <button id="submitButton1" type="button">send</button>
+    <h2 id="result1"></h2>
+    <script>
+      document.getElementById('submitButton1').addEventListener('click', function() {
+        var textareaValue = document.getElementById('kokain1').value.toLowerCase().trim();
+        if (textareaValue === 'im a banana') {
+          document.getElementById('result1').innerText = 'You won!';
+          // Zeige Abschnitt 2 nach dem Gewinnen an
+          document.getElementById('section2').style.display = 'block';
+          // Verstecke Abschnitt 1
+          document.getElementById('section1').style.display = 'none';
+        } else {
+          alert('Try again!');
+        }
+      });
+    </script>
+  </div>
+
+  <!-- Zweiter Abschnitt -->
+  <div id="section2">
+    <h1>you won</h1>
+    <!-- ...weiterer HTML-Inhalt für Abschnitt 2 -->
+  </div>
+</body>
+</html>
